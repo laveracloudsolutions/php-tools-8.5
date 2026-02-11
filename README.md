@@ -8,8 +8,8 @@ PHP Tools (Base [php-runner-8.5](https://github.com/laveracloudsolutions/php-run
 
 ```bash
 # Tagguer l'image
-docker build -t ghcr.io/laveracloudsolutions/php-tools:8.3.13-apache-bookworm .
-docker push ghcr.io/laveracloudsolutions/php-tools:8.3.13-apache-bookworm
+docker build -t ghcr.io/laveracloudsolutions/php-tools:8.5-apache .
+docker push ghcr.io/laveracloudsolutions/php-tools:8.5-apache
 ```
 
 ## Docker Image | GHCR.IO | Github Action
