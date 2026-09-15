@@ -5,10 +5,10 @@ ENV COMPOSER_VERSION=2.2.25
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/api/public
 
-# 1. Configuration du dépôt NodeSource (Node 20)
+# Installation de Node.js 24 LTS (Méthode moderne compatible Trixie/Debian 13)
 RUN mkdir -p /etc/apt/keyrings && \
     curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
-    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_24.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 
 # 2. Configuration du dépôt Yarn (Méthode moderne sans apt-key)
 RUN curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor -o /etc/apt/keyrings/yarn.gpg && \
